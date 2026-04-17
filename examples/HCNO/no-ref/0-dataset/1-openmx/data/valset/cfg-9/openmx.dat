@@ -1,0 +1,74 @@
+System.CurrentDirectory        .
+System.Name        openmx
+DATA.PATH        /data/home/sunjian/lzx/apps/openmx3.9/DFT_DATA19
+level.of.fileout        1
+Species.Number        4
+<Definition.of.Atomic.Species
+    H  H6.0-s2p1  H_PBE19
+    C  C6.0-s2p1d1  C_PBE19
+    N  N6.0-s2p1d1  N_PBE19
+    O  O6.0-s2p1d1  O_PBE19
+Definition.of.Atomic.Species>
+
+Atoms.Number        32
+Atoms.SpeciesAndCoordinates.Unit        Ang
+<Atoms.SpeciesAndCoordinates
+    1  H  3.45926444  1.45014546  2.71072141  0.5  0.5
+    2  H  2.71708298  2.61402754  1.31565094  0.5  0.5
+    3  H  0.47071394  2.52325016  1.71514556  0.5  0.5
+    4  H  1.12112065  1.7816461  3.00512835  0.5  0.5
+    5  H  3.77128224  1.84547088  0.01855381  0.5  0.5
+    6  H  2.03885001  2.43615166  4.2460794  0.5  0.5
+    7  H  1.52294519  1.83997005  0.08054048  0.5  0.5
+    8  H  4.13308597  2.41362011  4.34419601  0.5  0.5
+    9  C  0.38089146  0.60397776  1.4194513  2.0  2.0
+    10  C  3.49292492  3.54146584  2.87444404  2.0  2.0
+    11  C  2.45749746  0.56839694  1.43903038  2.0  2.0
+    12  C  2.48473543  0.57653505  4.32923119  2.0  2.0
+    13  C  1.40035316  3.57074258  5.80518177  2.0  2.0
+    14  C  0.39538425  0.59033425  4.37952553  2.0  2.0
+    15  C  1.43437738  3.60730094  2.90796392  2.0  2.0
+    16  C  3.49701252  3.58296363  5.78766822  2.0  2.0
+    17  N  1.45970981  0.53792073  5.08958287  2.5  2.5
+    18  N  2.46754122  3.65277076  3.66058712  2.5  2.5
+    19  N  3.53680008  0.51475897  5.06123626  2.5  2.5
+    20  N  0.41028097  3.65185536  0.6936268  2.5  2.5
+    21  N  3.56318906  0.49775495  2.14785375  2.5  2.5
+    22  N  2.46281277  3.62000497  0.67710969  2.5  2.5
+    23  N  1.43283199  0.54381962  2.19581872  2.5  2.5
+    24  N  0.36968824  3.64694592  3.63476383  2.5  2.5
+    25  O  0.35984748  1.64329738  3.67722121  3.0  3.0
+    26  O  3.53284643  2.55129036  2.11713669  3.0  3.0
+    27  O  3.47204109  2.57661968  5.11270121  3.0  3.0
+    28  O  1.39908342  2.58150642  5.09862753  3.0  3.0
+    29  O  0.41298526  1.61795725  0.68446549  3.0  3.0
+    30  O  1.38877214  2.57749313  2.18241792  3.0  3.0
+    31  O  2.49324771  1.52107393  0.6344972  3.0  3.0
+    32  O  2.46845699  1.5812726  3.63771077  3.0  3.0
+Atoms.SpeciesAndCoordinates>
+
+Atoms.UnitVectors.Unit        Ang
+<Atoms.UnitVectors
+    4.20203877  0.0  0.0
+    0.0  4.16474724  0.0
+    0.0  0.0  5.87899733
+Atoms.UnitVectors>
+
+scf.Kgrid        10 10 10
+scf.maxIter        1000
+scf.Mixing.History        30
+scf.ElectronicTemperature        300
+scf.energycutoff        1000
+scf.Init.Mixing.Weight        0.2
+scf.Min.Mixing.Weight        0.001
+scf.Max.Mixing.Weight        0.2
+scf.criterion        1e-08
+scf.XcType        GGA-PBE
+scf.EigenvalueSolver        Band
+scf.Mixing.Type        rmm-diisk
+MD.maxIter        1
+MD.TimeStep        1
+MD.Opt.criterion        0.0001
+MD.Type        nomd
+level.of.stdout        1
+HS.fileout        On

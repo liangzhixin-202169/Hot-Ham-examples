@@ -1,0 +1,40 @@
+{
+    "write": ["h_pred", "olp", "rR"],
+    "trainset": "./trainset.pth",
+    "orbit": {
+        "H": ["1s", "2s", "2p"],
+        "C": ["1s", "2s", "2p", "3d"],
+        "N": ["1s", "2s", "2p", "3d"],
+        "O": ["1s", "2s", "2p", "3d"]
+    },
+    "intdtype": "int64",
+    "floatdtype": "float32",
+    "complexdtype": "complex64",
+    "device": "cpu",
+    "prediction": 1,
+    "init_from_checkpoint": "../../../1-train/1-openmx/checkpoint/cp3000.pth",
+    "model_type": 0,
+    "rc": 7.5,
+    "basis_size": 32,
+    "L_max": 5,
+    "using_layernorm": true,
+    "using_layernorm2": false,
+    "restrict_last_out": true,
+    "using_rearrangement_linear": true,
+    "Ce": [
+        16,
+        16,
+        16,
+        16,
+        32
+    ],
+    "Co": [
+        0,
+        0,
+        0,
+        0,
+        32
+    ],
+    "edge_include_sc": true,
+    "using_CoordinateTransformation": true,
+}

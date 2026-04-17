@@ -1,0 +1,5 @@
+1. ./data/: perform openmx to get hamiltonian
+
+2. ./script/openmx2hotham: preprocess openmx's hamiltonian, and output to 'Hks.txt' file
+
+3. ./generate_dataset.py: convert 'Hks.txt' file to hotham format, generate trainset.pth, testset.pth, and valset.pth

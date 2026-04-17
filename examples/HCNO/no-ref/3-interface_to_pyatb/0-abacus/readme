@@ -1,0 +1,3 @@
+1. 0-scf: perfrom scf to get overlap and position matrix
+
+2. 1-hamilton_prediction: predict hamilton and write in pyatb format, and then perform pyatb calculation.

@@ -1,0 +1,50 @@
+#!/bin/sh
+#SBATCH -N 1
+#SBATCH --partition=p1
+#SBATCH -n 40
+#SBATCH --ntasks-per-node=40
+#SBATCH --output=%j.out
+#SBATCH --error=%j.err
+
+#export I_MPI_ADJUST_REDUCE=3
+export OMP_NUM_THREADS=40
+#export MKL_NUM_THREADS=1
+
+ulimit -c 0
+
+COMPUTE_START() {
+    touch computing
+}
+
+COMPUTE_END() {
+    rm computing
+}
+
+CLEAN() {
+    rm -rf *.cube
+    rm -rf openmx_rst
+    rm -rf openmx.scfout
+}
+
+IS_SUCCESSFUL() {
+    if test $? -ne 0
+    then
+        touch failed
+	exit 1
+    else
+        touch finished
+    fi
+}
+
+if ([ ! -f finished ] && [ ! -f unfinished ] && [ ! -f computing ] && [ ! -f failed ])
+then
+    COMPUTE_START
+    source /data/app/anaconda3/2024.10-1/etc/profile.d/conda.sh
+    conda activate abacus 
+    mpirun -n 1 abacus > log
+    IS_SUCCESSFUL
+    CLEAN
+    COMPUTE_END
+fi
+
+

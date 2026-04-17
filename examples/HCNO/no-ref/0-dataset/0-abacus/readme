@@ -1,0 +1,3 @@
+1. ./data/: perform abacus to get hamiltonian
+
+2. ./generate_dataset.py: convert dft's hamiltonian in ./data/ to hotham format, generate trainset.pth, testset.pth, and valset.pth

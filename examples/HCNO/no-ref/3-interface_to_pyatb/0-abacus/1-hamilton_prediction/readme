@@ -1,0 +1,14 @@
+1. generate_dataset.py: 
+  (1) convert position to graph
+  (2) if 'dft'=='abacus', find HR, SR, and rR files, and convert to hotham format
+  (3) if 'dft'=='openmx', read Hks.txt and convert to hotham format
+
+2. pyatb_format_scripy.py: write hamilton, overlap, position matrix in pyatb(abacus) format.
+
+3. input.json: key 'write' indicates which matrix should be writen.
+  (1) h_ref: dft's hamilton
+  (2) h_pred: hotham's hamilton
+  (3) olp: overlap
+  (4) rR: position matrix
+
+4. preprocess.py: generate pyatb input files.

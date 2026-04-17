@@ -1,0 +1,23 @@
+#!/bin/sh
+#SBATCH -N 1
+#SBATCH --partition=p1
+#SBATCH -n 40
+#SBATCH --ntasks-per-node=40
+#SBATCH --output=%j.out
+#SBATCH --error=%j.err
+
+export I_MPI_ADJUST_REDUCE=3
+export OMP_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+
+ulimit -s unlimited
+ulimit -l unlimited
+
+module load cuda/12.4
+source /data/app/anaconda3/2024.10-1/etc/profile.d/conda.sh
+conda activate hotham
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+
+python generate_dataset.py
+python pyatb_format_scripy.py input.json > log
+python preprocess.py

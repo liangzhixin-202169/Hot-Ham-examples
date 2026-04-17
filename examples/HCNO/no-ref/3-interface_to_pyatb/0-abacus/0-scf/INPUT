@@ -1,0 +1,18 @@
+INPUT_PARAMETERS
+# Created by Atomic Simulation Enviroment
+basis_type                              lcao
+dft_functional                          PBE
+kspacing                                0.2
+calculation                             get_S
+out_chg                                 -1
+ecutwfc                                 80
+scf_thr                                 1e-08
+scf_nmax                                100
+smearing_method                         gauss
+mixing_type                             broyden
+mixing_beta                             0.8
+out_mat_hs2                             True
+out_mat_r                               True
+ntype                                   4
+pseudo_dir                              /data/home/sunjian/lzx/apps/SG15_ONCV_v1.0_upf
+orbital_dir                             /data/home/sunjian/lzx/apps/SG15-Version1p0__StandardOrbitals-Version2p0
